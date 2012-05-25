@@ -38,6 +38,10 @@
   (list (foreign-slot-value point $point $x)
         (foreign-slot-value point $point $y)))
 
+(defun to-pointf (pointf)
+  (list (foreign-slot-value pointf $pointf $x)
+        (foreign-slot-value pointf $pointf $y)))
+
 (defun node-info (node)
   (foreign-slot-pointer node $node-t $u))
 
@@ -45,7 +49,7 @@
   (foreign-string-to-lisp (foreign-slot-value node $node-t $name)))
 
 (defun node-coordinate (node)
-  (to-point (foreign-slot-value (node-info node) $agnodeinfo-t $coord)))
+  (to-pointf (foreign-slot-value (node-info node) $agnodeinfo-t $coord)))
 
 (defun node-size (node)
   (list (foreign-slot-value (node-info node) $agnodeinfo-t $width)
@@ -68,30 +72,19 @@
 
 ; TODO what is this actually?
 (defun bezier-start-point (bezier)
-  (to-point (foreign-slot-value bezier $bezier $sp)))
+  (to-pointf (foreign-slot-value bezier $bezier $sp)))
 
 ; TODO what is this actually?
 (defun bezier-end-point (bezier)
-  (to-point (foreign-slot-value bezier $bezier $ep)))
+  (to-pointf (foreign-slot-value bezier $bezier $ep)))
 
 (defun bezier-point-count (bezier)
   (foreign-slot-value bezier $bezier $size))
 
 (defun bezier-point-at (bezier index)
   (let* ((points (foreign-slot-value bezier $bezier $list))
-         (point (mem-aref points $point index)))
-    (to-point point)))
-
-;(defun bezier-points (bezier)
-;  (bind (((startx starty) (bezier-start-point bezier))
-;         ((endx endy) (bezier-end-point bezier))
-;         (result '()))
-;    (push (list startx starty) result)
-;    (bezier-iterate-points bezier
-;                           (lambda (x y)
-;                             (push (list x y) result)))
-;    (push (list endx endy) result)
-;    (nreverse result)))
+         (pointf (mem-aref points $pointf index)))
+    (to-pointf pointf)))
 
 (defun bezier-points (bezier)
   (let ((result '()))
@@ -128,13 +121,13 @@
     (foreign-slot-pointer edge-info $agedgeinfo-t $tail_label)))
 
 (defun label-coordinate (label)
-  (to-point (foreign-slot-value label $textlabel-t $p)))
+  (to-pointf (foreign-slot-value label $textlabel-t $pos)))
 
 (defun box-lower-left (box)
-  (to-point (foreign-slot-value box $box $ll)))
+  (to-pointf (foreign-slot-value box $box $ll)))
 
 (defun box-upper-right (box)
-  (to-point (foreign-slot-value box $box $ur)))
+  (to-pointf (foreign-slot-value box $box $ur)))
 
 (defun graph-bounding-box (graph)
   (let* ((graph-info (foreign-slot-pointer graph $agraph-t $u))

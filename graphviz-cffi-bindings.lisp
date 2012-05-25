@@ -10,10 +10,14 @@
   (:export "JUST"
            "YOFFSET-CENTERLINE"
            "YOFFSET-LAYOUT"
+           "FONT"
            "FREE-LAYOUT"
            "LAYOUT"
            "STR"
            "TEXTPARA-T"
+           "CNT"
+           "COLOR"
+           "HTMLFONT-T"
            "POSTSCRIPT-ALIAS"
            "SVG-FONT-STYLE"
            "SVG-FONT-WEIGHT"
@@ -22,20 +26,12 @@
            "STYLE"
            "STRETCH"
            "FAMILY"
-           "-NEW"
-           "-CONSTRUCTOR"
-           "-OPERATOR-="
-           "AGDICT-T-NEW"
-           "AGDICT-T-CONSTRUCTOR"
-           "AGDICT-T-OPERATOR-="
            "ELIST-NEW"
            "ELIST-CONSTRUCTOR"
            "ELIST-OPERATOR-="
            "SHAPE-FUNCTIONS-NEW"
            "SHAPE-FUNCTIONS-CONSTRUCTOR"
            "SHAPE-FUNCTIONS-OPERATOR-="
-           ".-41-NEW"
-           ".-41-CONSTRUCTOR"
            "BOX-OPERATOR-="
            "AGRAPHINFO-T-NEW"
            "AGRAPHINFO-T-CONSTRUCTOR"
@@ -43,9 +39,6 @@
            "TEXTLABEL-T-NEW"
            "TEXTLABEL-T-CONSTRUCTOR"
            "TEXTLABEL-T-OPERATOR-="
-           "INSIDE-T-NEW"
-           "INSIDE-T-CONSTRUCTOR"
-           "INSIDE-T-OPERATOR-="
            "NODEQUEUE-NEW"
            "NODEQUEUE-CONSTRUCTOR"
            "NODEQUEUE-OPERATOR-="
@@ -58,9 +51,6 @@
            "SHAPE-DESC-NEW"
            "SHAPE-DESC-CONSTRUCTOR"
            "SHAPE-DESC-OPERATOR-="
-           "BEZIERF-NEW"
-           "BEZIERF-CONSTRUCTOR"
-           "BEZIERF-OPERATOR-="
            "RANK-T-NEW"
            "RANK-T-CONSTRUCTOR"
            "RANK-T-OPERATOR-="
@@ -79,44 +69,33 @@
            "STROKE-T-NEW"
            "STROKE-T-CONSTRUCTOR"
            "STROKE-T-OPERATOR-="
-           ".-46-NEW"
-           ".-46-CONSTRUCTOR"
            "SPLINE-INFO-OPERATOR-="
            "BEZIER-NEW"
            "BEZIER-CONSTRUCTOR"
            "BEZIER-OPERATOR-="
-           ".-57-NEW"
-           ".-57-CONSTRUCTOR"
            "GVLAYOUT-FEATURES-T-OPERATOR-="
            "AGDATA-T-NEW"
            "AGDATA-T-CONSTRUCTOR"
            "AGDATA-T-OPERATOR-="
-           "NLIST-T-NEW"
-           "NLIST-T-CONSTRUCTOR"
-           "NLIST-T-OPERATOR-="
            "AGPROTO-T-NEW"
            "AGPROTO-T-CONSTRUCTOR"
            "AGPROTO-T-OPERATOR-="
            "FIELD-T-NEW"
            "FIELD-T-CONSTRUCTOR"
            "FIELD-T-OPERATOR-="
-           "SPLINESF-NEW"
-           "SPLINESF-CONSTRUCTOR"
-           "SPLINESF-OPERATOR-="
            "PATH-NEW"
            "PATH-CONSTRUCTOR"
            "PATH-OPERATOR-="
            "AGRAPH-T-NEW"
            "AGRAPH-T-CONSTRUCTOR"
            "AGRAPH-T-OPERATOR-="
-           ".-56-NEW"
-           ".-56-CONSTRUCTOR"
            "FDP-PARMS-T-OPERATOR-="
+           "AGDICT-T-NEW"
+           "AGDICT-T-CONSTRUCTOR"
+           "AGDICT-T-OPERATOR-="
            "LAYOUT-T-NEW"
            "LAYOUT-T-CONSTRUCTOR"
            "LAYOUT-T-OPERATOR-="
-           ".-40-NEW"
-           ".-40-CONSTRUCTOR"
            "POINT-OPERATOR-="
            "ADJMATRIX-T-NEW"
            "ADJMATRIX-T-CONSTRUCTOR"
@@ -124,12 +103,13 @@
            "PATHEND-T-NEW"
            "PATHEND-T-CONSTRUCTOR"
            "PATHEND-T-OPERATOR-="
-           ".-42-NEW"
-           ".-42-CONSTRUCTOR"
            "BOXF-OPERATOR-="
            "PORT-NEW"
            "PORT-CONSTRUCTOR"
            "PORT-OPERATOR-="
+           "NLIST-T-NEW"
+           "NLIST-T-CONSTRUCTOR"
+           "NLIST-T-OPERATOR-="
            "AGEDGEINFO-T-NEW"
            "AGEDGEINFO-T-CONSTRUCTOR"
            "AGEDGEINFO-T-OPERATOR-="
@@ -140,12 +120,35 @@
            "AGSYM-T-CONSTRUCTOR"
            "AGSYM-T-OPERATOR-="
            "GV-CONTEXT"
+           "GV-PLUGINS-GRAPH"
+           "AGLSTNODE"
+           "AGPUTC"
+           "AGSTRCANON"
            "AGSUBG"
            "GV-NEXT-INPUT-GRAPH"
+           "GV-ADD-LIBRARY"
+           "APIS"
+           "PACKAGENAME"
+           "GVPLUGIN-LIBRARY-T"
+           "TYPES"
+           "API"
+           "GVPLUGIN-API-T"
+           "FEATURES"
+           "ENGINE"
+           "QUALITY"
+           "GVPLUGIN-INSTALLED-T"
+           "API-LOADIMAGE"
+           "API-DEVICE"
+           "API-TEXTLAYOUT"
+           "API-LAYOUT"
+           "API-RENDER"
+           "API-T"
            "AGXGET"
            "AGSETERR"
+           "BOX"
            "AGREAD-USERGETS"
            "AGHTMLSTR"
+           "GV-FINALIZE"
            "AGFINDNODE"
            "QSORT-CMPF"
            "AGFSTNODE"
@@ -153,13 +156,12 @@
            "GV-RENDER-FILENAME"
            "AGSTRDUP"
            "AGGET"
-           "AGWRITE"
+           "AGPUTS"
+           "AGSTRFREE"
            "AGSET"
-           "AGLSTNODE"
            "GV-LAYOUT-JOBS"
            "S"
            "A"
-           "INSIDE-T"
            "AGNXTOUT"
            "LIMIT"
            "STORE"
@@ -168,41 +170,46 @@
            "GVC-VERSION"
            "GVC-BUILD-DATE"
            "AGNXTIN"
+           "AGPROTONODE"
+           "GV-LAYOUT"
            "AGERRNO"
-           "AGSTRCANON"
            "ATTRSYM-T"
            "AGFINDATTR"
            "BSEARCH-CMPF"
+           "AGRESETERRORS"
            "AGFINDEDGE"
+           "AGWRITE"
            "AGEDGEATTR"
-           "GV-FREE-CONTEXT"
+           "AGFSTATTR"
            "AGERRORS"
-           "AGSTRFREE"
            "AGDELETE"
+           "AGLSTATTR"
            "AGLASTERR"
            "STROKES"
            "NSTROKES"
            "SHAPE-T"
+           "AGSETIODISC"
            "NVERTICES"
            "STROKE-T"
-           "GV-USERNAME"
            "AGNODEATTR"
            "AGPRVNODE"
+           "AGPROTOEDGE"
            "GV-RENDER"
            "AGCONTAINS"
            "ATTACH-ATTRS"
            "GVC-INFO"
            "GETS-F"
+           "AGCLOSE"
            "AGSTRDUP-HTML"
-           "GV-LAYOUT"
            "AGGRAPH"
            "AGNODE"
            "AGOBJKIND-T"
            "AGRAPHATTR"
+           "IS-ORTHO"
+           "IGNORE-SWAP"
            "SPLINE-MERGE"
            "SWAP-ENDS"
            "SPLINE-INFO"
-           "HTMLLABEL-T"
            "AGINITLIB"
            "AGNNODES"
            "AGSETFILE"
@@ -212,23 +219,20 @@
            "AGFSTOUT"
            "GV-FREE-LAYOUT"
            "AGNEDGES"
+           "GV-FREE-CONTEXT"
            "LR"
            "FLD"
            "LP"
            "N-FLDS"
            "B"
            "FIELD-T"
-           "SPLINESF"
-           "BEZIERF"
+           "AGATTR"
            "AGCOPYATTR"
+           "AGPRVATTR"
            "AGEDGE"
            "AGINSERT"
            "AGFINDSUBG"
            "NBOX"
-           "LRPP"
-           "LLPP"
-           "URPP"
-           "ULPP"
            "END"
            "START"
            "SH-EPSF"
@@ -237,12 +241,8 @@
            "SH-POLY"
            "SH-UNSET"
            "SHAPE-KIND"
-           "AGCLOSE"
            "AGXSET"
            "AGWARNINGF"
-           "AGNXTNODE"
-           "GV-RENDER-DATA"
-           "AGERRORF"
            "T-0"
            "K"
            "TFACT"
@@ -252,16 +252,24 @@
            "USE-NEW"
            "USE-GRID"
            "FDP-PARMS-T"
+           "AGNXTNODE"
+           "GV-RENDER-DATA"
+           "GV-PLUGIN-LIST"
+           "AGSETERRF"
+           "AGUSERERRF"
+           "AGERRORF"
            "AGPREV"
            "AGMAX"
            "AGERR"
            "AGWARN"
            "AGERRLEVEL-T"
            "GV-NE-WCONTEXT"
+           "GV-RENDER-CONTEXT"
            "AGREAD"
            "FILE"
            "SIZE-T"
            "AGFSTEDGE"
+           "POINT"
            "AGOPEN"
            "BOXES"
            "BOXN"
@@ -272,11 +280,12 @@
            "GV-RENDER-JOBS"
            "AGREADLINE"
            "GV-PARSE-ARGS"
+           "AGCANON"
            "GV-TOGGLE"
            "AGINDEX"
            "AGMEMREAD"
-           "GVC-USERNAME"
            "AGFSTIN"
+           "AGNXTATTR"
            "AGNXTEDGE"
            "TAIL"
            "HEAD"
@@ -306,11 +315,13 @@
            "PPOLY-T"
            "PPOINT-T"
            "SIDE"
+           "DYNA"
            "CLIP"
            "CONSTRAINED"
            "DEFINED"
            "BP"
            "THETA"
+           "P"
            "PORT"
            "SPLINES"
            "EP"
@@ -346,15 +357,12 @@
            "MARK"
            "NODE-TYPE"
            "HAS-PORT"
-           "POS"
            "HOPS"
            "HEAPINDEX"
-           "ID"
-           "YSIZE"
-           "XSIZE"
            "PINNED"
            "CLUSTNODE"
            "STATE"
+           "XLABEL"
            "RW"
            "LW"
            "HT"
@@ -367,7 +375,6 @@
            "ELIST"
            "AGEDGE-T"
            "EDGE-T"
-           "BOXF"
            "USERSHAPE"
            "POLYGON"
            "FNS"
@@ -422,6 +429,7 @@
            "NLIST"
            "CLUST"
            "N-CLUSTER"
+           "ODIM"
            "NDIM"
            "T"
            "SUM-T"
@@ -434,7 +442,6 @@
            "ALG"
            "FLAGS"
            "RANKDIR"
-           "CHARSET"
            "HAS-IMAGES"
            "HAS-LABELS"
            "GUI-STATE"
@@ -467,24 +474,24 @@
            "GRAPH-T"
            "AGNODE-T"
            "NODE-T"
-           "GVC-T"
-           "GVC-S"
            "UR"
            "LL"
-           "BOX"
+           "BOXF"
            "HTML"
            "SET"
+           "VALIGN"
            "U"
-           "D"
-           "P"
+           "POS"
+           "SPACE"
            "DIMEN"
            "FONTSIZE"
+           "CHARSET"
            "FONTCOLOR"
            "FONTNAME"
            "TEXT"
            "TEXTLABEL-T"
-           "POINTF"
-           "POINTF-S"
+           "ID"
+           "XDOTS"
            "RATIO-KIND"
            "CENTERED"
            "LANDSCAPE"
@@ -504,9 +511,10 @@
            "R-NONE"
            "RATIO-T"
            "BOOLEAN"
+           "POINTF"
            "Y"
            "X"
-           "POINT"
+           "POINTF-S"
            "PREV"
            "E"
            "N"
@@ -525,9 +533,9 @@
            "PRINTED"
            "INDEX"
            "VALUE"
-           "NAME"
            "AGSYM-T"
            "DICT-T"
+           "USER"
            "WALK"
            "VIEW"
            "NVIEW"
@@ -538,6 +546,7 @@
            "DTMETHOD-T"
            "SEARCHF"
            "DTDATA-T"
+           "MINP"
            "LOOP"
            "NTAB"
            "HH"
@@ -562,7 +571,13 @@
            "DTCOMPAR-F"
            "DTFREE-F"
            "DTMAKE-F"
-           "DTSEARCH-F"))
+           "DTSEARCH-F"
+           "GV-CONTEXT-PLUGINS"
+           "ADDRESS"
+           "NAME"
+           "LT-SYMLIST-T"
+           "GVC-T"
+           "GVC-S"))
 
 (cl:in-package :graphviz-cffi-bindings)
 
@@ -572,6 +587,18 @@
 
 (cl:defmacro virtual-funcall (pobj indx coff cl:&body body)
   `(cffi:foreign-funcall-pointer (vtable-lookup ,pobj ,indx ,coff) ,cl:nil ,@body))
+
+(cffi:defcstruct gvc-s
+	)
+
+(cffi::defctype gvc-t gvc-s)
+
+(cffi:defcstruct lt-symlist-t
+  (name :pointer)
+  (address (:pointer :void)))
+
+(cffi:defcfun ("gvContextPlugins" gv-context-plugins) :pointer (builtins :pointer)
+                                                               (demand-loading :int))
 
 (cffi::defctype dtsearch-f :pointer)
 
@@ -599,24 +626,29 @@
   (eventf dtevent-f))
 
 (cffi::defctype dtdisc-t _dtdisc-s)
-;;; Skipping anonymous composite type #<UNION <anonymous> {1007ABB6C1}>
+
+(cffi:defcunion _dtlink-s-inside-anon-union
+  (_hash :unsigned-int)
+  (_left :pointer )) ; (:pointer dtlink-t)
 
 (cffi:defcstruct _dtlink-s
   (right :pointer)
-  #+nil(hl ;;; Skipping anonymous type #<UNION <anonymous> {1007ABB6C1}>
-  ))
+  (hl _dtlink-s-inside-anon-union ))
 
 (cffi::defctype dtlink-t _dtlink-s)
-;;; Skipping anonymous composite type #<UNION <anonymous> {1007AC0C81}>
+
+(cffi:defcunion _dtdata-s-inside-anon-union
+   (_htab (:pointer (:pointer DTLINK-T)))
+   (_head (:pointer DTLINK-T)))
 
 (cffi:defcstruct _dtdata-s
   (type :int)
   (here :pointer)
-  #+nil(hh ;;; Skipping anonymous type #<UNION <anonymous> {1007AC0C81}>
-  )
+  (hh _dtdata-s-inside-anon-union)
   (ntab :int)
   (size :int)
-  (loop :int))
+  (loop :int)
+  (minp :int))
 
 (cffi::defctype dtdata-t _dtdata-s)
 
@@ -635,7 +667,8 @@
   (type :int)
   (nview :int)
   (view :pointer)
-  (walk :pointer))
+  (walk :pointer)
+  (user (:pointer :void)))
 
 (cffi::defctype dt-t _dt-s)
 
@@ -666,9 +699,11 @@
   (e :pointer)
   (prev :pointer))
 
-(cffi:defcstruct point
-  (x :int)
-  (y :int))
+(cffi:defcstruct pointf-s
+  (x :double)
+  (y :double))
+
+(cffi::defctype pointf pointf-s)
 
 (cffi::defctype boolean :unsigned-char)
 
@@ -685,42 +720,57 @@
   (scale :double)
   (ratio :double)
   (dpi :double)
-  (margin point)
-  (page point)
-  (size point)
+  (margin pointf)
+  (page pointf)
+  (size pointf)
   (filled boolean)
   (landscape boolean)
   (centered boolean)
-  (ratio-kind ratio-t))
+  (ratio-kind ratio-t)
+  (xdots (:pointer :void))
+  (id (:pointer :char)))
 
-(cffi:defcstruct pointf-s
-  (x :double)
-  (y :double))
+(cffi:defcstruct textpara-t
+  (str (:pointer :char))
+  (postscript-alias :pointer)
+  (layout (:pointer :void))
+  (free-layout :pointer)
+  (font :pointer)
+  (fontname (:pointer :char))
+  (fontsize :double)
+  (size :double)
+  (yoffset-layout :double)
+  (yoffset-centerline :double)
+  (width :double)
+  (height :double)
+  (just :char))
 
-(cffi::defctype pointf pointf-s)
-;;; Skipping anonymous composite type #<UNION <anonymous> {1007ACC661}>
+
+(cffi:defcstruct textlabel-t-inside-anon-struct
+  (para (:pointer textpara-t))
+  (nparas :short))
+
+(cffi:defcunion textlabel-t-inside-anon-union
+  (txt textlabel-t-inside-anon-struct)
+  (html :pointer)) ; (:pointer htmllabel-t) - htmllable is undefined
 
 (cffi:defcstruct textlabel-t
   (text (:pointer :char))
   (fontname (:pointer :char))
   (fontcolor (:pointer :char))
+  (charset :int)
   (fontsize :double)
   (dimen pointf)
-  (p point)
-  (d pointf)
-  #+nil(u ;;; Skipping anonymous type #<UNION <anonymous> {1007ACC661}>
-  )
+  (space pointf)
+  (pos pointf)
+  (u textlabel-t-inside-anon-union)
+  (valign :char)
   (set boolean)
   (html boolean))
 
-(cffi:defcstruct box
-  (ll point)
-  (ur point))
-
-(cffi:defcstruct gvc-s
-  )
-
-(cffi::defctype gvc-t gvc-s)
+(cffi:defcstruct boxf
+  (ll pointf)
+  (ur pointf))
 
 (cffi:defcstruct adjmatrix-t
   (nrows :int)
@@ -753,8 +803,8 @@
 (cffi:defcstruct agraphinfo-t
   (drawing :pointer)
   (label :pointer)
-  (bb box)
-  (border point :count 4)
+  (bb boxf)
+  (border pointf :count 4)
   (gui-state :unsigned-char)
   (has-labels :unsigned-char)
   (has-images boolean)
@@ -772,7 +822,8 @@
   (spring :pointer)
   (sum-t :pointer)
   (t :pointer)
-  (ndim :int)
+  (ndim :unsigned-short)
+  (odim :unsigned-short)
   (n-cluster :int)
   (clust :pointer)
   (nlist :pointer)
@@ -800,11 +851,14 @@
   (exact-ranksep boolean))
 
 (cffi:defcstruct agraph-t
-  ;;; Skipping field #<FIELD tag> in #<STRUCT Agraph_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+  ;;; Skipping field #<FIELD tag> in #<STRUCT
+  ;                                     Agraph_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
 
-  ;;; Skipping field #<FIELD kind> in #<STRUCT Agraph_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+  ;;; Skipping field #<FIELD kind> in #<STRUCT
+  ;                                      Agraph_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
 
-  ;;; Skipping field #<FIELD handle> in #<STRUCT Agraph_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+  ;;; Skipping field #<FIELD handle> in #<STRUCT
+  ;                                        Agraph_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
   
   (padding1 :int) ;; generated to pad 32 bits of skipped bitfield typed fields
   (attr :pointer)
@@ -845,10 +899,6 @@
   (polygon :pointer)
   (usershape boolean))
 
-(cffi:defcstruct boxf
-  (ll pointf)
-  (ur pointf))
-
 (cffi:defcstruct elist
   (list :pointer)
   (size :int))
@@ -856,21 +906,20 @@
 (cffi:defcstruct agnodeinfo-t
   (shape :pointer)
   (shape-info (:pointer :void))
-  (coord point)
+  (coord pointf)
   (width :double)
   (height :double)
   (bb boxf)
-  (ht :int)
-  (lw :int)
-  (rw :int)
+  (ht :double)
+  (lw :double)
+  (rw :double)
   (label :pointer)
+  (xlabel :pointer)
   (alg (:pointer :void))
   (state :char)
   (gui-state :unsigned-char)
   (clustnode boolean)
   (pinned :unsigned-char)
-  (xsize :short)
-  (ysize :short)
   (id :int)
   (heapindex :int)
   (hops :int)
@@ -909,11 +958,14 @@
   (pad :double :count 1))
 
 (cffi:defcstruct agnode-t
-  ;;; Skipping field #<FIELD tag> in #<STRUCT Agnode_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+  ;;; Skipping field #<FIELD tag> in #<STRUCT
+  ;                                     Agnode_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
 
-  ;;; Skipping field #<FIELD pad> in #<STRUCT Agnode_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+  ;;; Skipping field #<FIELD pad> in #<STRUCT
+  ;                                     Agnode_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
 
-  ;;; Skipping field #<FIELD handle> in #<STRUCT Agnode_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+  ;;; Skipping field #<FIELD handle> in #<STRUCT
+  ;                                        Agnode_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
   
   (padding2 :int) ;; generated to pad 32 bits of skipped bitfield typed fields
   (attr :pointer)
@@ -925,13 +977,14 @@
 
 (cffi::defctype node-t agnode-t)
 
+
 (cffi:defcstruct bezier
   (list :pointer)
   (size :int)
   (sflag :int)
   (eflag :int)
-  (sp point)
-  (ep point))
+  (sp pointf)
+  (ep pointf))
 
 (cffi:defcstruct splines
   (list :pointer)
@@ -939,14 +992,16 @@
   (bb boxf))
 
 (cffi:defcstruct port
-  (p point)
+  (p pointf)
   (theta :double)
   (bp :pointer)
   (defined boolean)
   (constrained boolean)
   (clip boolean)
+  (dyna boolean)
   (order :unsigned-char)
-  (side :unsigned-char))
+  (side :unsigned-char)
+  (name (:pointer :char)))
 
 (cffi::defctype ppoint-t pointf-s)
 
@@ -963,6 +1018,7 @@
   (label :pointer)
   (head-label :pointer)
   (tail-label :pointer)
+  (xlabel :pointer)
   (edge-type :char)
   (adjacent :char)
   (label-ontop :char)
@@ -975,7 +1031,7 @@
   (showboxes :unsigned-char)
   (conc-opp-flag boolean)
   (xpenalty :short)
-  (weight :int)
+  (weight :float)
   (cutvalue :int)
   (tree-index :int)
   (count :short)
@@ -983,11 +1039,14 @@
   (to-virt :pointer))
 
 (cffi:defcstruct agedge-t
-  ;;; Skipping field #<FIELD tag> in #<STRUCT Agedge_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+  ;;; Skipping field #<FIELD tag> in #<STRUCT
+  ;                                     Agedge_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
 
-  ;;; Skipping field #<FIELD printkey> in #<STRUCT Agedge_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+  ;;; Skipping field #<FIELD printkey> in #<STRUCT
+  ;                                          Agedge_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
 
-  ;;; Skipping field #<FIELD handle> in #<STRUCT Agedge_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+  ;;; Skipping field #<FIELD handle> in #<STRUCT
+  ;                                        Agedge_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
   
   (padding3 :int) ;; generated to pad 32 bits of skipped bitfield typed fields
   (attr :pointer)
@@ -1001,15 +1060,17 @@
 
 (cffi:defcfun ("agnxtedge" agnxtedge) :pointer (arg1 :pointer) (arg2 :pointer) (arg3 :pointer))
 
-(cffi:defcfun ("agfstin" agfstin) :pointer (arg1 :pointer) (arg2 :pointer))
+(cffi:defcfun ("agnxtattr" agnxtattr) :pointer (arg1 (:pointer :void)) (arg2 :pointer))
 
-(cffi:defcfun ("gvcUsername" gvc-username) (:pointer :char) (arg1 :pointer))
+(cffi:defcfun ("agfstin" agfstin) :pointer (arg1 :pointer) (arg2 :pointer))
 
 (cffi:defcfun ("agmemread" agmemread) :pointer (arg1 (:pointer :char)))
 
 (cffi:defcfun ("agindex" agindex) :int (arg1 (:pointer :void)) (arg2 (:pointer :char)))
 
 (cffi:defcfun ("gvToggle" gv-toggle) :void (arg1 :int))
+
+(cffi:defcfun ("agcanon" agcanon) (:pointer :char) (arg1 (:pointer :char)))
 
 (cffi:defcfun ("gvParseArgs" gv-parse-args) :int (gvc :pointer) (argc :int) (argv :pointer))
 
@@ -1018,13 +1079,17 @@
 (cffi:defcfun ("gvRenderJobs" gv-render-jobs) :int (gvc :pointer) (g :pointer))
 
 (cffi:defcstruct pathend-t
-  (nb box)
-  (np point)
+  (nb boxf)
+  (np pointf)
   (sidemask :int)
   (boxn :int)
-  (boxes box :count 20))
+  (boxes boxf :count 20))
 
 (cffi:defcfun ("agopen" agopen) :pointer (arg1 (:pointer :char)) (arg2 :int))
+
+(cffi:defcstruct point
+  (x :int)
+  (y :int))
 
 (cffi:defcfun ("agfstedge" agfstedge) :pointer (arg1 :pointer) (arg2 :pointer))
 
@@ -1037,9 +1102,11 @@
 
 (cffi::defctype _io-lock-t :void)
 
-(cffi::defctype _-off-64-t :long)
+(cffi::defctype _-quad-t :long-long)
 
-(cffi::defctype size-t :unsigned-long)
+(cffi::defctype _-off-64-t _-quad-t)
+
+(cffi::defctype size-t :unsigned-int)
 
 (cffi:defcstruct _io-file
   (_flags :int)
@@ -1070,19 +1137,38 @@
   (_-pad-4 (:pointer :void))
   (_-pad-5 size-t)
   (_mode :int)
-  (_unused-2 :char :count 20))
+  (_unused-2 :char :count 40))
 
 (cffi::defctype file _io-file)
 
 (cffi:defcfun ("agread" agread) :pointer (arg1 :pointer))
 
-(cffi:defcfun ("gvNEWcontext" gv-ne-wcontext) :pointer (info :pointer) (user (:pointer :char)))
+(cffi:defcfun ("gvRenderContext" gv-render-context) :int (gvc :pointer) (g :pointer)
+                                                         (format :pointer)
+                                                         (context (:pointer :void)))
+
+(cffi:defcfun ("gvNEWcontext" gv-ne-wcontext) :pointer (builtins :pointer) (demand-loading :int))
 
 (cffi:defcenum agerrlevel-t
   (:agwarn 0)
   (:agerr 1)
   (:agmax 2)
   (:agprev 3))
+
+(cffi:defcfun ("agerrorf" agerrorf) :void (fmt :pointer)common-lisp:&rest)
+
+(cffi::defctype agusererrf :pointer)
+
+(cffi:defcfun ("agseterrf" agseterrf) agusererrf (arg1 agusererrf))
+
+(cffi:defcfun ("gvPluginList" gv-plugin-list) :pointer (gvc :pointer) (kind (:pointer :char))
+                                                       (sz (:pointer :int)) (arg4 (:pointer :char)))
+
+(cffi:defcfun ("gvRenderData" gv-render-data) :int (gvc :pointer) (g :pointer) (format :pointer)
+                                                   (result :pointer)
+                                                   (length (:pointer :unsigned-int)))
+
+(cffi:defcfun ("agnxtnode" agnxtnode) :pointer (arg1 :pointer) (arg2 :pointer))
 
 (cffi:defcstruct fdp-parms-t
   (use-grid :int)
@@ -1094,19 +1180,9 @@
   (k :double)
   (t-0 :double))
 
-(cffi:defcfun ("agerrorf" agerrorf) :void (fmt (:pointer :char))common-lisp:&rest)
-
-(cffi:defcfun ("gvRenderData" gv-render-data) :int (gvc :pointer) (g :pointer)
-                                                   (format (:pointer :char)) (result :pointer)
-                                                   (length (:pointer :unsigned-int)))
-
-(cffi:defcfun ("agnxtnode" agnxtnode) :pointer (arg1 :pointer) (arg2 :pointer))
-
 (cffi:defcfun ("agwarningf" agwarningf) :void (fmt (:pointer :char))common-lisp:&rest)
 
 (cffi:defcfun ("agxset" agxset) :int (arg1 (:pointer :void)) (arg2 :int) (arg3 (:pointer :char)))
-
-(cffi:defcfun ("agclose" agclose) :void (arg1 :pointer))
 
 (cffi:defcenum shape-kind
   (:sh-unset 0)
@@ -1118,10 +1194,6 @@
 (cffi:defcstruct path
   (start port)
   (end port)
-  (ulpp :pointer)
-  (urpp :pointer)
-  (llpp :pointer)
-  (lrpp :pointer)
   (nbox :int)
   (boxes :pointer)
   (data (:pointer :void)))
@@ -1132,23 +1204,16 @@
 
 (cffi:defcfun ("agedge" agedge) :pointer (arg1 :pointer) (arg2 :pointer) (arg3 :pointer))
 
+(cffi:defcfun ("agprvattr" agprvattr) :pointer (arg1 (:pointer :void)) (arg2 :pointer))
+
 (cffi:defcfun ("agcopyattr" agcopyattr) :int (arg1 (:pointer :void)) (arg2 (:pointer :void)))
 
-(cffi:defcstruct bezierf
-  (list :pointer)
-  (size :int)
-  (sflag :int)
-  (eflag :int)
-  (sp pointf)
-  (ep pointf))
-
-(cffi:defcstruct splinesf
-  (list :pointer)
-  (size :int))
+(cffi:defcfun ("agattr" agattr) :pointer (arg1 (:pointer :void)) (arg2 (:pointer :char))
+                                         (arg3 (:pointer :char)))
 
 (cffi:defcstruct field-t
-  (size point)
-  (b box)
+  (size pointf)
+  (b boxf)
   (n-flds :int)
   (lp :pointer)
   (fld :pointer)
@@ -1157,6 +1222,8 @@
   (sides :unsigned-char))
 
 (cffi:defcfun ("agerr" agerr) :int (level agerrlevel-t) (fmt (:pointer :char))common-lisp:&rest)
+
+(cffi:defcfun ("gvFreeContext" gv-free-context) :int (gvc :pointer))
 
 (cffi:defcfun ("agnedges" agnedges) :int (arg1 :pointer))
 
@@ -1178,12 +1245,11 @@
 
 (cffi:defcfun ("aginitlib" aginitlib) :void (arg1 :int) (arg2 :int) (arg3 :int))
 
-(cffi:defcstruct htmllabel-t
-  )
-
 (cffi:defcstruct spline-info
   (swap-ends :pointer)
-  (spline-merge :pointer))
+  (spline-merge :pointer)
+  (ignore-swap boolean)
+  (is-ortho boolean))
 
 (cffi:defcfun ("agraphattr" agraphattr) :pointer (arg1 :pointer) (arg2 (:pointer :char))
                                                  (arg3 (:pointer :char)))
@@ -1193,9 +1259,9 @@
   (:agedge 2)
   (:aggraph 3))
 
-(cffi:defcfun ("gvLayout" gv-layout) :int (gvc :pointer) (g :pointer) (engine (:pointer :char)))
-
 (cffi:defcfun ("agstrdup_html" agstrdup-html) (:pointer :char) (s (:pointer :char)))
+
+(cffi:defcfun ("agclose" agclose) :void (arg1 :pointer))
 
 (cffi::defctype gets-f :pointer)
 
@@ -1205,20 +1271,23 @@
 
 (cffi:defcfun ("agcontains" agcontains) :int (arg1 :pointer) (arg2 (:pointer :void)))
 
-(cffi:defcfun ("gvRender" gv-render) :int (gvc :pointer) (g :pointer) (format (:pointer :char))
+(cffi:defcfun ("gvRender" gv-render) :int (gvc :pointer) (g :pointer) (format :pointer)
                                           (out :pointer))
+
+(cffi:defcfun ("agprotoedge" agprotoedge) :pointer (arg1 :pointer))
 
 (cffi:defcfun ("agprvnode" agprvnode) :pointer (arg1 :pointer) (arg2 :pointer))
 
 (cffi:defcfun ("agnodeattr" agnodeattr) :pointer (arg1 :pointer) (arg2 (:pointer :char))
                                                  (arg3 (:pointer :char)))
 
-(cffi:defcfun ("gvUsername" gv-username) (:pointer :char))
-
 (cffi:defcstruct stroke-t
   (nvertices :int)
   (flags :int)
   (vertices :pointer))
+
+(cffi:defcfun ("agsetiodisc" agsetiodisc) :void (myfgets :pointer) (myfwrite :pointer)
+                                                (myferror :pointer))
 
 (cffi:defcstruct shape-t
   (nstrokes :int)
@@ -1226,18 +1295,22 @@
 
 (cffi:defcfun ("aglasterr" aglasterr) (:pointer :char))
 
-(cffi:defcfun ("agdelete" agdelete) :void (arg1 :pointer) (arg2 (:pointer :void)))
+(cffi:defcfun ("aglstattr" aglstattr) :pointer (arg1 (:pointer :void)))
 
-(cffi:defcfun ("agstrfree" agstrfree) :void (arg1 (:pointer :char)))
+(cffi:defcfun ("agdelete" agdelete) :void (arg1 :pointer) (arg2 (:pointer :void)))
 
 (cffi:defcfun ("agerrors" agerrors) :int)
 
-(cffi:defcfun ("gvFreeContext" gv-free-context) :int (gvc :pointer))
+(cffi:defcfun ("agfstattr" agfstattr) :pointer (arg1 (:pointer :void)))
 
 (cffi:defcfun ("agedgeattr" agedgeattr) :pointer (arg1 :pointer) (arg2 (:pointer :char))
                                                  (arg3 (:pointer :char)))
 
+(cffi:defcfun ("agwrite" agwrite) :int (arg1 :pointer) (arg2 :pointer))
+
 (cffi:defcfun ("agfindedge" agfindedge) :pointer (arg1 :pointer) (arg2 :pointer) (arg3 :pointer))
+
+(cffi:defcfun ("agreseterrors" agreseterrors) :int)
 
 (cffi::defctype bsearch-cmpf :pointer)
 
@@ -1245,10 +1318,11 @@
 
 (cffi::defctype attrsym-t agsym-t)
 
-(cffi:defcfun ("agstrcanon" agstrcanon) (:pointer :char) (arg1 (:pointer :char))
-                                                         (arg2 (:pointer :char)))
-
 (cffi:defcvar ("agerrno" agerrno) agerrlevel-t)
+
+(cffi:defcfun ("gvLayout" gv-layout) :int (gvc :pointer) (g :pointer) (engine :pointer))
+
+(cffi:defcfun ("agprotonode" agprotonode) :pointer (arg1 :pointer))
 
 (cffi:defcfun ("agnxtin" agnxtin) :pointer (arg1 :pointer) (arg2 :pointer))
 
@@ -1265,23 +1339,17 @@
   (tail :pointer))
 
 (cffi:defcfun ("agnxtout" agnxtout) :pointer (arg1 :pointer) (arg2 :pointer))
-;;; Skipping anonymous composite type #<STRUCT <anonymous> {1007ACC241}>
-;;; Skipping anonymous composite type #<STRUCT <anonymous> {1007ACC261}>
-
-(cffi:defcunion inside-t
-  #+nil(a ;;; Skipping anonymous type #<STRUCT <anonymous> {1007ACC241}>
-  )
-  #+nil(s ;;; Skipping anonymous type #<STRUCT <anonymous> {1007ACC261}>
-  ))
+;;; Skipping anonymous composite type #<STRUCT <anonymous> {CB7C861}>
+;;; Skipping anonymous composite type #<STRUCT <anonymous> {CB7C871}>
 
 (cffi:defcfun ("gvLayoutJobs" gv-layout-jobs) :int (gvc :pointer) (g :pointer))
-
-(cffi:defcfun ("aglstnode" aglstnode) :pointer (arg1 :pointer))
 
 (cffi:defcfun ("agset" agset) :int (arg1 (:pointer :void)) (arg2 (:pointer :char))
                                    (arg3 (:pointer :char)))
 
-(cffi:defcfun ("agwrite" agwrite) :int (arg1 :pointer) (arg2 :pointer))
+(cffi:defcfun ("agstrfree" agstrfree) :void (arg1 (:pointer :char)))
+
+(cffi:defcfun ("agputs" agputs) :int (s :pointer) (fp :pointer))
 
 (cffi:defcfun ("agget" agget) (:pointer :char) (arg1 (:pointer :void)) (arg2 (:pointer :char)))
 
@@ -1290,8 +1358,7 @@
 (cffi:defcfun ("agnode" agnode) :pointer (arg1 :pointer) (arg2 (:pointer :char)))
 
 (cffi:defcfun ("gvRenderFilename" gv-render-filename) :int (gvc :pointer) (g :pointer)
-                                                           (format (:pointer :char))
-                                                           (filename (:pointer :char)))
+                                                           (format :pointer) (filename :pointer))
 
 (cffi:defcfun ("agprotograph" agprotograph) :pointer)
 
@@ -1301,31 +1368,579 @@
 
 (cffi:defcfun ("agfindnode" agfindnode) :pointer (arg1 :pointer) (arg2 (:pointer :char)))
 
+(cffi:defcfun ("gvFinalize" gv-finalize) :void (gvc :pointer))
+
 (cffi:defcfun ("aghtmlstr" aghtmlstr) :int (s (:pointer :char)))
 
 (cffi:defcfun ("agread_usergets" agread-usergets) :pointer (arg1 :pointer) (arg2 gets-f))
+
+(cffi:defcstruct box
+  (ll point)
+  (ur point))
 
 (cffi:defcfun ("agseterr" agseterr) :void (arg1 agerrlevel-t))
 
 (cffi:defcfun ("agxget" agxget) (:pointer :char) (arg1 (:pointer :void)) (arg2 :int))
 
+(cffi:defcenum api-t
+  (:api-render 0)
+  (:api-layout 1)
+  (:api-textlayout 2)
+  (:api-device 3)
+  (:api-loadimage 4)
+  (:_dummy-elem- 0))
+
+(cffi:defcstruct gvplugin-installed-t
+  (id :int)
+  (type :pointer)
+  (quality :int)
+  (engine (:pointer :void))
+  (features (:pointer :void)))
+
+(cffi:defcstruct gvplugin-api-t
+  (api api-t)
+  (types :pointer))
+
+(cffi:defcstruct gvplugin-library-t
+  (packagename (:pointer :char))
+  (apis :pointer))
+
+(cffi:defcfun ("gvAddLibrary" gv-add-library) :void (gvc :pointer) (lib :pointer))
+
 (cffi:defcfun ("gvNextInputGraph" gv-next-input-graph) :pointer (gvc :pointer))
 
 (cffi:defcfun ("agsubg" agsubg) :pointer (arg1 :pointer) (arg2 (:pointer :char)))
 
+(cffi:defcfun ("agstrcanon" agstrcanon) (:pointer :char) (arg1 (:pointer :char))
+                                                         (arg2 (:pointer :char)))
+
+(cffi:defcfun ("agputc" agputc) :int (c :int) (fp :pointer))
+
+(cffi:defcfun ("aglstnode" aglstnode) :pointer (arg1 :pointer))
+
+(cffi:defcfun ("gvPluginsGraph" gv-plugins-graph) :pointer (gvc :pointer))
+
 (cffi:defcfun ("gvContext" gv-context) :pointer)
 
-(cffi:defcstruct textpara-t
-  (str (:pointer :char))
-  (fontname (:pointer :char))
-  (postscript-alias :pointer)
-  (layout (:pointer :void))
-  (free-layout :pointer)
-  (fontsize :double)
-  (width :double)
-  (height :double)
-  (yoffset-layout :double)
-  (yoffset-centerline :double)
-  (just :char))
+(cffi:defcfun ("_ZN7Agsym_taSERKS_" agsym-t-operator-=) agsym-t (this :pointer) (arg1 agsym-t))
 
+(cffi:defcfun ("_ZN7Agsym_tC1ERKS_" agsym-t-constructor) :void (this :pointer) (arg1 agsym-t))
+
+(cl:defun agsym-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agsym-t)))
+    (agsym-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN7Agsym_tC1Ev" agsym-t-constructor) :void (this :pointer))
+
+(cl:defun agsym-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agsym-t)))
+    (agsym-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN9polygon_taSERKS_" polygon-t-operator-=) polygon-t (this :pointer)
+                                                                      (arg1 polygon-t))
+
+(cffi:defcfun ("_ZN9polygon_tC1ERKS_" polygon-t-constructor) :void (this :pointer) (arg1 polygon-t))
+
+(cl:defun polygon-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'polygon-t)))
+    (polygon-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN9polygon_tC1Ev" polygon-t-constructor) :void (this :pointer))
+
+(cl:defun polygon-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'polygon-t)))
+    (polygon-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN12Agedgeinfo_taSERKS_" agedgeinfo-t-operator-=) agedgeinfo-t (this :pointer)
+                                                                                (arg1 agedgeinfo-t))
+
+(cffi:defcfun ("_ZN12Agedgeinfo_tC1ERKS_" agedgeinfo-t-constructor) :void (this :pointer)
+                                                                          (arg1 agedgeinfo-t))
+
+(cl:defun agedgeinfo-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agedgeinfo-t)))
+    (agedgeinfo-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN12Agedgeinfo_tC1Ev" agedgeinfo-t-constructor) :void (this :pointer))
+
+(cl:defun agedgeinfo-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agedgeinfo-t)))
+    (agedgeinfo-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN7nlist_taSERKS_" nlist-t-operator-=) nlist-t (this :pointer) (arg1 nlist-t))
+
+(cffi:defcfun ("_ZN7nlist_tC1ERKS_" nlist-t-constructor) :void (this :pointer) (arg1 nlist-t))
+
+(cl:defun nlist-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'nlist-t)))
+    (nlist-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN7nlist_tC1Ev" nlist-t-constructor) :void (this :pointer))
+
+(cl:defun nlist-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'nlist-t)))
+    (nlist-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN4portaSERKS_" port-operator-=) port (this :pointer) (arg1 port))
+
+(cffi:defcfun ("_ZN4portC1ERKS_" port-constructor) :void (this :pointer) (arg1 port))
+
+(cl:defun port-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'port)))
+    (port-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN4portC1Ev" port-constructor) :void (this :pointer))
+
+(cl:defun port-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'port)))
+    (port-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN4boxfaSERKS_" boxf-operator-=) boxf (this :pointer) (arg1 boxf))
+
+(cffi:defcfun ("_ZN9pathend_taSERKS_" pathend-t-operator-=) pathend-t (this :pointer)
+                                                                      (arg1 pathend-t))
+
+(cffi:defcfun ("_ZN9pathend_tC1ERKS_" pathend-t-constructor) :void (this :pointer) (arg1 pathend-t))
+
+(cl:defun pathend-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'pathend-t)))
+    (pathend-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN9pathend_tC1Ev" pathend-t-constructor) :void (this :pointer))
+
+(cl:defun pathend-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'pathend-t)))
+    (pathend-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN11adjmatrix_taSERKS_" adjmatrix-t-operator-=) adjmatrix-t (this :pointer)
+                                                                             (arg1 adjmatrix-t))
+
+(cffi:defcfun ("_ZN11adjmatrix_tC1ERKS_" adjmatrix-t-constructor) :void (this :pointer)
+                                                                        (arg1 adjmatrix-t))
+
+(cl:defun adjmatrix-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'adjmatrix-t)))
+    (adjmatrix-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN11adjmatrix_tC1Ev" adjmatrix-t-constructor) :void (this :pointer))
+
+(cl:defun adjmatrix-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'adjmatrix-t)))
+    (adjmatrix-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN5pointaSERKS_" point-operator-=) point (this :pointer) (arg1 point))
+
+(cffi:defcfun ("_ZN8layout_taSERKS_" layout-t-operator-=) layout-t (this :pointer) (arg1 layout-t))
+
+(cffi:defcfun ("_ZN8layout_tC1ERKS_" layout-t-constructor) :void (this :pointer) (arg1 layout-t))
+
+(cl:defun layout-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'layout-t)))
+    (layout-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8layout_tC1Ev" layout-t-constructor) :void (this :pointer))
+
+(cl:defun layout-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'layout-t)))
+    (layout-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8Agdict_taSERKS_" agdict-t-operator-=) agdict-t (this :pointer) (arg1 agdict-t))
+
+(cffi:defcfun ("_ZN8Agdict_tC1ERKS_" agdict-t-constructor) :void (this :pointer) (arg1 agdict-t))
+
+(cl:defun agdict-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agdict-t)))
+    (agdict-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8Agdict_tC1Ev" agdict-t-constructor) :void (this :pointer))
+
+(cl:defun agdict-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agdict-t)))
+    (agdict-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN10fdpParms_taSERKS_" fdp-parms-t-operator-=) fdp-parms-t (this :pointer)
+                                                                            (arg1 fdp-parms-t))
+
+(cffi:defcfun ("_ZN8Agraph_taSERKS_" agraph-t-operator-=) agraph-t (this :pointer) (arg1 agraph-t))
+
+(cffi:defcfun ("_ZN8Agraph_tC1ERKS_" agraph-t-constructor) :void (this :pointer) (arg1 agraph-t))
+
+(cl:defun agraph-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agraph-t)))
+    (agraph-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8Agraph_tC1Ev" agraph-t-constructor) :void (this :pointer))
+
+(cl:defun agraph-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agraph-t)))
+    (agraph-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN4pathaSERKS_" path-operator-=) path (this :pointer) (arg1 path))
+
+(cffi:defcfun ("_ZN4pathC1ERKS_" path-constructor) :void (this :pointer) (arg1 path))
+
+(cl:defun path-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'path)))
+    (path-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN4pathC1Ev" path-constructor) :void (this :pointer))
+
+(cl:defun path-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'path)))
+    (path-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN7field_taSERKS_" field-t-operator-=) field-t (this :pointer) (arg1 field-t))
+
+(cffi:defcfun ("_ZN7field_tC1ERKS_" field-t-constructor) :void (this :pointer) (arg1 field-t))
+
+(cl:defun field-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'field-t)))
+    (field-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN7field_tC1Ev" field-t-constructor) :void (this :pointer))
+
+(cl:defun field-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'field-t)))
+    (field-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN9Agproto_taSERKS_" agproto-t-operator-=) agproto-t (this :pointer)
+                                                                      (arg1 agproto-t))
+
+(cffi:defcfun ("_ZN9Agproto_tC1ERKS_" agproto-t-constructor) :void (this :pointer) (arg1 agproto-t))
+
+(cl:defun agproto-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agproto-t)))
+    (agproto-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN9Agproto_tC1Ev" agproto-t-constructor) :void (this :pointer))
+
+(cl:defun agproto-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agproto-t)))
+    (agproto-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8Agdata_taSERKS_" agdata-t-operator-=) agdata-t (this :pointer) (arg1 agdata-t))
+
+(cffi:defcfun ("_ZN8Agdata_tC1ERKS_" agdata-t-constructor) :void (this :pointer) (arg1 agdata-t))
+
+(cl:defun agdata-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agdata-t)))
+    (agdata-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8Agdata_tC1Ev" agdata-t-constructor) :void (this :pointer))
+
+(cl:defun agdata-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agdata-t)))
+    (agdata-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN19gvlayout_features_taSERKS_" gvlayout-features-t-operator-=) gvlayout-features-t (this :pointer)
+                                                                                                     (arg1 gvlayout-features-t))
+
+(cffi:defcfun ("_ZN6bezieraSERKS_" bezier-operator-=) bezier (this :pointer) (arg1 bezier))
+
+(cffi:defcfun ("_ZN6bezierC1ERKS_" bezier-constructor) :void (this :pointer) (arg1 bezier))
+
+(cl:defun bezier-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'bezier)))
+    (bezier-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN6bezierC1Ev" bezier-constructor) :void (this :pointer))
+
+(cl:defun bezier-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'bezier)))
+    (bezier-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN10splineInfoaSERKS_" spline-info-operator-=) spline-info (this :pointer)
+                                                                            (arg1 spline-info))
+
+(cffi:defcfun ("_ZN8stroke_taSERKS_" stroke-t-operator-=) stroke-t (this :pointer) (arg1 stroke-t))
+
+(cffi:defcfun ("_ZN8stroke_tC1ERKS_" stroke-t-constructor) :void (this :pointer) (arg1 stroke-t))
+
+(cl:defun stroke-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'stroke-t)))
+    (stroke-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8stroke_tC1Ev" stroke-t-constructor) :void (this :pointer))
+
+(cl:defun stroke-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'stroke-t)))
+    (stroke-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN7splinesaSERKS_" splines-operator-=) splines (this :pointer) (arg1 splines))
+
+(cffi:defcfun ("_ZN7splinesC1ERKS_" splines-constructor) :void (this :pointer) (arg1 splines))
+
+(cl:defun splines-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'splines)))
+    (splines-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN7splinesC1Ev" splines-constructor) :void (this :pointer))
+
+(cl:defun splines-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'splines)))
+    (splines-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8pointf_saSERKS_" pointf-s-operator-=) pointf-s (this :pointer) (arg1 pointf-s))
+
+(cffi:defcfun ("_ZN8pointf_sC1ERKS_" pointf-s-constructor) :void (this :pointer) (arg1 pointf-s))
+
+(cl:defun pointf-s-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'pointf-s)))
+    (pointf-s-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8pointf_sC1Ev" pointf-s-constructor) :void (this :pointer))
+
+(cl:defun pointf-s-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'pointf-s)))
+    (pointf-s-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN7shape_taSERKS_" shape-t-operator-=) shape-t (this :pointer) (arg1 shape-t))
+
+(cffi:defcfun ("_ZN7shape_tC1ERKS_" shape-t-constructor) :void (this :pointer) (arg1 shape-t))
+
+(cl:defun shape-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'shape-t)))
+    (shape-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN7shape_tC1Ev" shape-t-constructor) :void (this :pointer))
+
+(cl:defun shape-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'shape-t)))
+    (shape-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN12Agnodeinfo_taSERKS_" agnodeinfo-t-operator-=) agnodeinfo-t (this :pointer)
+                                                                                (arg1 agnodeinfo-t))
+
+(cffi:defcfun ("_ZN12Agnodeinfo_tC1ERKS_" agnodeinfo-t-constructor) :void (this :pointer)
+                                                                          (arg1 agnodeinfo-t))
+
+(cl:defun agnodeinfo-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agnodeinfo-t)))
+    (agnodeinfo-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN12Agnodeinfo_tC1Ev" agnodeinfo-t-constructor) :void (this :pointer))
+
+(cl:defun agnodeinfo-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agnodeinfo-t)))
+    (agnodeinfo-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN6rank_taSERKS_" rank-t-operator-=) rank-t (this :pointer) (arg1 rank-t))
+
+(cffi:defcfun ("_ZN6rank_tC1ERKS_" rank-t-constructor) :void (this :pointer) (arg1 rank-t))
+
+(cl:defun rank-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'rank-t)))
+    (rank-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN6rank_tC1Ev" rank-t-constructor) :void (this :pointer))
+
+(cl:defun rank-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'rank-t)))
+    (rank-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN10shape_descaSERKS_" shape-desc-operator-=) shape-desc (this :pointer)
+                                                                          (arg1 shape-desc))
+
+(cffi:defcfun ("_ZN10shape_descC1ERKS_" shape-desc-constructor) :void (this :pointer)
+                                                                      (arg1 shape-desc))
+
+(cl:defun shape-desc-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'shape-desc)))
+    (shape-desc-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN10shape_descC1Ev" shape-desc-constructor) :void (this :pointer))
+
+(cl:defun shape-desc-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'shape-desc)))
+    (shape-desc-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8Agnode_taSERKS_" agnode-t-operator-=) agnode-t (this :pointer) (arg1 agnode-t))
+
+(cffi:defcfun ("_ZN8Agnode_tC1ERKS_" agnode-t-constructor) :void (this :pointer) (arg1 agnode-t))
+
+(cl:defun agnode-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agnode-t)))
+    (agnode-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8Agnode_tC1Ev" agnode-t-constructor) :void (this :pointer))
+
+(cl:defun agnode-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agnode-t)))
+    (agnode-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8Agedge_taSERKS_" agedge-t-operator-=) agedge-t (this :pointer) (arg1 agedge-t))
+
+(cffi:defcfun ("_ZN8Agedge_tC1ERKS_" agedge-t-constructor) :void (this :pointer) (arg1 agedge-t))
+
+(cl:defun agedge-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agedge-t)))
+    (agedge-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN8Agedge_tC1Ev" agedge-t-constructor) :void (this :pointer))
+
+(cl:defun agedge-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agedge-t)))
+    (agedge-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN9nodequeueaSERKS_" nodequeue-operator-=) nodequeue (this :pointer)
+                                                                      (arg1 nodequeue))
+
+(cffi:defcfun ("_ZN9nodequeueC1ERKS_" nodequeue-constructor) :void (this :pointer) (arg1 nodequeue))
+
+(cl:defun nodequeue-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'nodequeue)))
+    (nodequeue-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN9nodequeueC1Ev" nodequeue-constructor) :void (this :pointer))
+
+(cl:defun nodequeue-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'nodequeue)))
+    (nodequeue-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN11textlabel_taSERKS_" textlabel-t-operator-=) textlabel-t (this :pointer)
+                                                                             (arg1 textlabel-t))
+
+(cffi:defcfun ("_ZN11textlabel_tC1ERKS_" textlabel-t-constructor) :void (this :pointer)
+                                                                        (arg1 textlabel-t))
+
+(cl:defun textlabel-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'textlabel-t)))
+    (textlabel-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN11textlabel_tC1Ev" textlabel-t-constructor) :void (this :pointer))
+
+(cl:defun textlabel-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'textlabel-t)))
+    (textlabel-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN12Agraphinfo_taSERKS_" agraphinfo-t-operator-=) agraphinfo-t (this :pointer)
+                                                                                (arg1 agraphinfo-t))
+
+(cffi:defcfun ("_ZN12Agraphinfo_tC1ERKS_" agraphinfo-t-constructor) :void (this :pointer)
+                                                                          (arg1 agraphinfo-t))
+
+(cl:defun agraphinfo-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agraphinfo-t)))
+    (agraphinfo-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN12Agraphinfo_tC1Ev" agraphinfo-t-constructor) :void (this :pointer))
+
+(cl:defun agraphinfo-t-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'agraphinfo-t)))
+    (agraphinfo-t-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN3boxaSERKS_" box-operator-=) box (this :pointer) (arg1 box))
+
+(cffi:defcfun ("_ZN15shape_functionsaSERKS_" shape-functions-operator-=) shape-functions (this :pointer)
+                                                                                         (arg1 shape-functions))
+
+(cffi:defcfun ("_ZN15shape_functionsC1ERKS_" shape-functions-constructor) :void (this :pointer)
+                                                                                (arg1 shape-functions))
+
+(cl:defun shape-functions-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'shape-functions)))
+    (shape-functions-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN15shape_functionsC1Ev" shape-functions-constructor) :void (this :pointer))
+
+(cl:defun shape-functions-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'shape-functions)))
+    (shape-functions-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN5elistaSERKS_" elist-operator-=) elist (this :pointer) (arg1 elist))
+
+(cffi:defcfun ("_ZN5elistC1ERKS_" elist-constructor) :void (this :pointer) (arg1 elist))
+
+(cl:defun elist-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'elist)))
+    (elist-constructor instance)
+    instance))
+
+(cffi:defcfun ("_ZN5elistC1Ev" elist-constructor) :void (this :pointer))
+
+(cl:defun elist-new ()
+  (cl:let ((instance (cffi:foreign-alloc 'elist)))
+    (elist-constructor instance)
+    instance))
+
+(cffi:defcstruct _-postscript-alias
+  (name (:pointer :char))
+  (family (:pointer :char))
+  (weight (:pointer :char))
+  (stretch (:pointer :char))
+  (style (:pointer :char))
+  (xfig-code :int)
+  (svg-font-family (:pointer :char))
+  (svg-font-weight (:pointer :char))
+  (svg-font-style (:pointer :char)))
+
+(cffi::defctype postscript-alias _-postscript-alias)
+
+(cffi:defcstruct htmlfont-t
+  (name (:pointer :char))
+  (color (:pointer :char))
+  ;;; Skipping field #<FIELD flags> in #<STRUCT
+  ;                                       htmlfont_t> because it has a bitfield type which is not yet supported by CFFI! Check the layout manually!
+
+  ;;; Encountered a field while the previous bitfield typed fields do not add up to 32 or 64 bits. The fields offsets will be wrong in #<STRUCT
+  ;                                                                                                                                       htmlfont_t>!
+  (flags :char) ; a try to handle bitfield (int flags:7;). not tested
+  (cnt :int)
+  (size :double))
 
