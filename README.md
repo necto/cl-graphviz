@@ -1,7 +1,7 @@
 cl-graphviz
 ===========
 
-Adoption of a bit outdated cl-graphviz library
+Adaptation of a bit outdated cl-graphviz library
   (http://common-lisp.net/project/cl-graphviz/index-old.shtml  page on cliki: http://www.cliki.net/cl-graphviz)
   written by
   Attila Lendvai (http://www.cliki.net/Attila%20Lendvai)
